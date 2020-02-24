@@ -1,0 +1,9 @@
+<div class="legal-form-error margin-top-1">
+  <div *ngIf="hasErrors('message') && !hasErrors('required')">
+    <p [innerHtml]="messageError"></p>
+  </div>
+
+  <p *ngIf="hasErrors('required')">
+    This field is required.
+  </p>
+</div>
