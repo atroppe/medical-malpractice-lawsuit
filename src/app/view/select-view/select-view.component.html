@@ -1,0 +1,20 @@
+<form [formGroup]="form" class="grid-x align-center">
+  <div class="cell medium-6 text-center">
+    <h3>
+      {{ view.content }}
+    </h3>
+
+    <div class="grid-x grid-padding-x align-middle align-center small-up-3">
+      <div class="cell" *ngFor="let value of view.values; let i = index">
+        <label>
+          <input type="checkbox" [formControlName]="value" [value]="true" />
+        </label>
+        <h6 class="bold margin-bottom-2">{{ value }}</h6>
+      </div>
+    </div>
+
+    <button type="button" class="button" (click)="onSetResponses(form)">
+      Next
+    </button>
+  </div>
+</form>
