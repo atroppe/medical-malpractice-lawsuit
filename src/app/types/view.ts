@@ -31,7 +31,6 @@ export class View {
 
 export enum ValidatorType {
   Required = 'Required',
-  No = 'No',
-  Yes = 'Yes',
-  None = 'None'
+  None = 'None',
+  OneOrMore = 'OneOrMore'
 }

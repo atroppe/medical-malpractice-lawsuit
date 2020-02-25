@@ -29,10 +29,11 @@ export class DynamicViewComponent implements OnInit {
   /**
    * Determines the current component to load
    *
-   * @param currentView
+   * @param currentView The current view
    */
   private loadComponent(currentView: View): void {
     this.view = currentView;
+    this.handleValidators(this.view.validatorType);
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.view.component);
     const viewContainerRef = this.dynamicView.viewContainerRef;
     viewContainerRef.clear();
@@ -41,7 +42,31 @@ export class DynamicViewComponent implements OnInit {
     componentRef.instance.view = this.view;
     componentRef.instance.setResponses.subscribe((event) => {
       this.saveAndNext(event.form);
+      console.log(this.viewsService.tdfFormData);
     });
+  }
+
+  /**
+   * Determines which validators should be set on the control
+   *
+   * @param validatorType The type of validator to add
+   */
+  handleValidators(validatorType: ValidatorType): void {
+    switch (validatorType) {
+      case ValidatorType.Required:
+        this.formGroup.controls[this.view.controlName].setValidators([
+          Validators.required
+        ]);
+        break;
+      case ValidatorType.OneOrMore:
+        // this.formGroup.controls[this.view.controlName].setValidators([
+        //   // todo
+        //   this.onOrMoreValidator(this.view.values, this.view.errorMsgs)
+        // ]);
+        break;
+      default:
+        break;
+    }
   }
 
   /**
@@ -54,6 +79,6 @@ export class DynamicViewComponent implements OnInit {
     this.viewsService.tdfFormData = form.value;
     const control = form.controls[this.view.controlName];
     if (control && !control.valid) return;
-    this.currentIndex++;
+    this.loadComponent(this.views[++this.currentIndex]);
   }
 }
