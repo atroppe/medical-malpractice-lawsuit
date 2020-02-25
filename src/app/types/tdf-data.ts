@@ -14,7 +14,7 @@ export class TdfData {
   boneFractures: boolean;
   boneBreaks: boolean;
   toothLoss: boolean;
-  hasOtherBoneInjury: boolean;
+  other: boolean;
   otherBoneInjury: string;
 
   constructor() {
@@ -33,7 +33,7 @@ export class TdfData {
     this.boneFractures=false;
     this.boneBreaks=false;
     this.toothLoss=false;
-    this.hasOtherBoneInjury=false;
+    this.other=false;
     this.otherBoneInjury='';
   }
 }
