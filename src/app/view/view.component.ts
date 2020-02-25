@@ -29,4 +29,14 @@ export class ViewComponent implements DynamicView, OnInit {
       this.setResponses.emit({ form });
     }, 10);
   }
+
+  /**
+   * Determines if the checkbox is checked
+   *
+   * @param control The name of the form control
+   */
+  isChecked(control: string): boolean {
+    return this.form.controls[control].value;
+  }
+
 }
