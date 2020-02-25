@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ViewComponent } from '../view/view.component';
+import { ViewComponent } from '../view.component';
+
 
 @Component({
   selector: 'legal-contact-view',
