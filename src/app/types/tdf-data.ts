@@ -16,6 +16,11 @@ export class TdfData {
   toothLoss: boolean;
   other: boolean;
   otherBoneInjury: string;
+  chronicKidneyDisease: string;
+  endStageRenalDisease: string;
+  fanconiSyndrome: string;
+  renalTubuleDamage: string;
+  otherKidneyInjury: string;
 
   constructor() {
     this.viread = false;
@@ -35,5 +40,10 @@ export class TdfData {
     this.toothLoss=false;
     this.other=false;
     this.otherBoneInjury='';
+    this.chronicKidneyDisease='';
+    this.endStageRenalDisease='';
+    this.fanconiSyndrome='';
+    this.renalTubuleDamage='';
+    this.otherKidneyInjury='';
   }
 }

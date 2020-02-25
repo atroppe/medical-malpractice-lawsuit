@@ -21,6 +21,16 @@ export class ViewsService {
     new View(
       SelectViewComponent, `Were you diagnosed with any of the following bone injuries?`, [], 'boneInjuries', ValidatorType.None, [],
       ['osteoporosis', 'osteopenia', 'osteomalacia', 'boneFractures', 'boneBreaks', 'toothLoss', 'other']
+    ),
+    new View(
+      SelectViewComponent, `Were you diagnosed with any of the following kidney injuries?`, [], 'kidney', ValidatorType.None, [],
+      [
+        'chronicKidneyDisease',
+        'endStageRenalDisease',
+        'fanconiSyndrome',
+        'renalTubuleDamage',
+        'otherKidneyInjury'
+      ]
     )
   ];
 
