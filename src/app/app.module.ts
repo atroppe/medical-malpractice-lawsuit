@@ -14,6 +14,8 @@ import { FormErrorComponent } from './form-error/form-error.component';
 import { DynamicViewDirective } from './dynamic-view.directive';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { LayoutComponent } from './layouts/layout/layout.component';
+import { ViewLayoutComponent } from './layouts/view-layout/view-layout.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HomeComponent } from './home/home.component';
     FormErrorComponent,
     DynamicViewDirective,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    LayoutComponent,
+    ViewLayoutComponent
   ],
   imports: [
     BrowserModule,

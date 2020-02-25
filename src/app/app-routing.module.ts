@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { DynamicViewComponent } from './dynamic-view/dynamic-view.component';
+import { LayoutComponent } from './layouts/layout/layout.component';
+import { ViewLayoutComponent } from './layouts/view-layout/view-layout.component';
 
 
 const routes: Routes = [
@@ -14,17 +16,26 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    data: {
-      title: 'TDF INTAKE'
-    }
   },
   {
-    path: 'view',
-    component: DynamicViewComponent,
+    path: 'tdf-intake',
+    component: ViewLayoutComponent,
     data: {
-      title: 'TDF INTAKE'
-    }
+      title: 'tdf intake'
+    },
+    children: [
+      {
+        path: '',
+        redirectTo: 'form',
+        pathMatch: 'full'
+      },
+      {
+        path: 'form',
+        component: DynamicViewComponent,
+      }
+    ]
   },
+
   // {
   //   path: 'client-info',
   //   component: ClientInfoComponent

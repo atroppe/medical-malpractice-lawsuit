@@ -1,0 +1,11 @@
+.section {
+  padding: 1rem 0;
+
+  @include breakpoint(medium) {
+    padding: 3rem 0;
+  }
+}
+
+.fullscreen {
+  min-height: 100vh;
+}
