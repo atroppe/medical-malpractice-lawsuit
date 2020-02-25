@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layouts/layout/layout.component';
 import { ViewLayoutComponent } from './layouts/view-layout/view-layout.component';
 import { ClientInfoComponent } from './client-info/client-info.component';
+import { ContactViewComponent } from './contact-view/contact-view.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ClientInfoComponent } from './client-info/client-info.component';
     HomeComponent,
     LayoutComponent,
     ViewLayoutComponent,
-    ClientInfoComponent
+    ClientInfoComponent,
+    ContactViewComponent
   ],
   imports: [
     BrowserModule,

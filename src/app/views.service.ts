@@ -4,6 +4,7 @@ import { SelectViewComponent } from './view/select-view/select-view.component';
 import { TextViewComponent } from './view/text-view/text-view.component';
 import { DateViewComponent } from './view/date-view/date-view.component';
 import { TdfData } from './types/tdf-data';
+import { ContactViewComponent } from './contact-view/contact-view.component';
 
 @Injectable({
   providedIn: 'root'
@@ -29,9 +30,11 @@ export class ViewsService {
         'endStageRenalDisease',
         'fanconiSyndrome',
         'renalTubuleDamage',
-        'otherKidneyInjury'
+        'other'
       ]
-    )
+    ),
+    new View(ContactViewComponent, `Who diagnosed you with the above bone or kidney injuries (include address and phone
+      number of doctor)?`, [], 'kidneyDiagnosisDr', ValidatorType.None, [], ['doctorName', 'doctorAddress', 'doctorPhoneNumber'])
   ];
 
   /**

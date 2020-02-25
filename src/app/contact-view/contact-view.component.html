@@ -1,0 +1,24 @@
+<form [formGroup]="form" class="grid-x align-center" (submit)="onSetResponses(form)">
+  <div class="cell medium-8 text-center">
+    <label>
+      <h3 class="margin-bottom-2">
+        {{ view.content }}
+      </h3>
+
+      <div *ngFor="let value of view.values">
+        <label>
+          {{ value }}
+          <input type="text" [formControlName]="value" />
+        </label>
+      </div>
+
+    </label>
+
+    <legal-form-error [control]="form.controls[controlName]"></legal-form-error>
+
+    <button type="button" class="button margin-top-1"
+      (click)="onSetResponses(form)">
+      Next
+    </button>
+  </div>
+</form>

@@ -21,6 +21,9 @@ export class TdfData {
   fanconiSyndrome: string;
   renalTubuleDamage: string;
   otherKidneyInjury: string;
+  doctorName: string;
+  doctorAddress: string;
+  doctorPhoneNumber: string;
 
   constructor() {
     this.viread = false;
@@ -45,5 +48,8 @@ export class TdfData {
     this.fanconiSyndrome='';
     this.renalTubuleDamage='';
     this.otherKidneyInjury='';
+    this.doctorName='';
+    this.doctorAddress='';
+    this.doctorPhoneNumber='';
   }
 }
