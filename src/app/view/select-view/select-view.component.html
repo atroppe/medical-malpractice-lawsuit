@@ -7,13 +7,12 @@
     <div class="grid-x grid-padding-x align-middle align-center small-up-3">
       <div class="cell" *ngFor="let value of view.values; let i = index">
         <label>
-          <input type="checkbox" [formControlName]="value" [value]="true" />
+          <input type="checkbox" [formControlName]="value" [value]="true" />{{ value }}
         </label>
-        <h6 class="bold margin-bottom-2">{{ value }}</h6>
       </div>
     </div>
 
-    <button type="button" class="button" (click)="onSetResponses(form)">
+    <button type="button" class="button margin-top-2" (click)="onSetResponses(form)">
       Next
     </button>
   </div>
