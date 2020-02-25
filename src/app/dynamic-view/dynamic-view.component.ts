@@ -4,6 +4,7 @@ import { ViewsService } from '../views.service';
 import { View, ValidatorType } from '../types/view';
 import { TdfData } from '../types/tdf-data';
 import { DynamicViewDirective } from '../dynamic-view.directive';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'legal-dynamic-view',
@@ -18,7 +19,7 @@ export class DynamicViewComponent implements OnInit {
   @ViewChild(DynamicViewDirective, { static: true })
   private dynamicView: DynamicViewDirective;
 
-  constructor(private viewsService: ViewsService, private formBuilder: FormBuilder, private componentFactoryResolver: ComponentFactoryResolver) { }
+  constructor(private router: Router, private viewsService: ViewsService, private formBuilder: FormBuilder, private componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngOnInit(): void {
     this.views = this.viewsService.getViews();
@@ -79,6 +80,10 @@ export class DynamicViewComponent implements OnInit {
     this.viewsService.tdfFormData = form.value;
     const control = form.controls[this.view.controlName];
     if (control && !control.valid) return;
-    this.loadComponent(this.views[++this.currentIndex]);
+    if (this.currentIndex < this.views.length - 1) {
+      this.loadComponent(this.views[++this.currentIndex]);
+    } else {
+      this.router.navigate(['/client-info']);
+    }
   }
 }

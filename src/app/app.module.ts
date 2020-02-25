@@ -16,6 +16,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layouts/layout/layout.component';
 import { ViewLayoutComponent } from './layouts/view-layout/view-layout.component';
+import { ClientInfoComponent } from './client-info/client-info.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ViewLayoutComponent } from './layouts/view-layout/view-layout.component
     PageNotFoundComponent,
     HomeComponent,
     LayoutComponent,
-    ViewLayoutComponent
+    ViewLayoutComponent,
+    ClientInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { DynamicViewComponent } from './dynamic-view/dynamic-view.component';
 import { LayoutComponent } from './layouts/layout/layout.component';
 import { ViewLayoutComponent } from './layouts/view-layout/view-layout.component';
+import { ClientInfoComponent } from './client-info/client-info.component';
 
 
 const routes: Routes = [
@@ -35,11 +36,10 @@ const routes: Routes = [
       }
     ]
   },
-
-  // {
-  //   path: 'client-info',
-  //   component: ClientInfoComponent
-  // },
+  {
+    path: 'client-info',
+    component: ClientInfoComponent
+  },
   // {
   //   path: 'confirmation',
   //   component: ConfirmationComponent
