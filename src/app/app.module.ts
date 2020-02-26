@@ -17,7 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layouts/layout/layout.component';
 import { ViewLayoutComponent } from './layouts/view-layout/view-layout.component';
 import { ClientInfoComponent } from './client-info/client-info.component';
-import { ContactViewComponent } from './contact-view/contact-view.component';
+import { ContactViewComponent } from './view/contact-view/contact-view.component';
 
 @NgModule({
   declarations: [
