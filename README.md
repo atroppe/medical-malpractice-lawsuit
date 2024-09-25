@@ -1,6 +1,8 @@
-# AngularFoundationTemplate
+# Angular Dynamic View Example
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+
+The project is an example of how a "smart" form can be made using polymorphic views, to minimize hard coded functionality. 
 
 ## Development server
 
